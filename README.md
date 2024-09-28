@@ -83,20 +83,20 @@ The **Inventory Management System** is a RESTful web service built with Django a
    To run the tests for the API, use the following command:**
    ```python manage.py test items```
    
-10. **Logging**
+    **Logging**
     Logging is configured to log messages to both the console and a file (debug.log). You can modify the logging configuration in settings.py as needed.
 
-11. **Caching**
+    **Caching**
     The API uses Redis to cache item data. Could you make sure that the Redis server is running to take advantage of this feature?
 
-12. **Contributing**
+    **Contributing**
     ```Fork the repository.
        1. Create a new branch (git checkout -b feature-branch).
        2. Make your changes and commit them (git commit -m 'Add new feature').
        3. Push to the branch (git push origin feature-branch).
        4. Create a new Pull Request.```
     
-13. **License**
+10. **License**
     This project is licensed under the MIT License - see the LICENSE file for details.
 
 
