@@ -94,7 +94,8 @@ The **Inventory Management System** is a RESTful web service built with Django a
        1. Create a new branch (git checkout -b feature-branch).
        2. Make your changes and commit them (git commit -m 'Add new feature').
        3. Push to the branch (git push origin feature-branch).
-       4. Create a new Pull Request.```
+       4. Create a new Pull Request.
+    ```
     
 10. **License**
     This project is licensed under the MIT License - see the LICENSE file for details.
