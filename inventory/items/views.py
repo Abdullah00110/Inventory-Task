@@ -3,6 +3,8 @@
 
 # logger = logging.getLogger('items')
 
+from log import logger
+
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -22,23 +24,23 @@ class ItemCreateView(APIView):
             serializer.save()
             # logger.debug("Item created successfully: %s", serializer.data)
             # Clear cache after creating an item
-            cache.delete('items_list')
+            # cache.delete('items_list')
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         # logger.warning("Invalid data for Item creation: %s", serializer.errors)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class ItemListView(APIView):
     def get(self, request):
-        # logger.info("GET request received for Item list")
+        logger.info("GET request received for Item list")
         # Check if cached data is available
-        items = cache.get('items_list')
+        # items = cache.get('items_list')
         
-        if not items:
-            items = Item.objects.all()
-            serializer = ItemSerializer(items, many=True)
-            cache.set('items_list', serializer.data, timeout=60*15)  # Cache for 15 minutes
-            # logger.debug("Items retrieved from database and cached")
-            return Response(serializer.data)
+        # if not items:
+        items = Item.objects.all()
+        serializer = ItemSerializer(items, many=True)
+        # cache.set('items_list', serializer.data, timeout=60*15)  # Cache for 15 minutes
+        # logger.debug("Items retrieved from database and cached")
+        return Response(serializer.data)
         
         # logger.debug("Items retrieved from cache")
         return Response(items)
@@ -53,7 +55,7 @@ class ItemDetailView(APIView):
             try:
                 item_obj = Item.objects.get(pk=pk)
                 serializer = ItemSerializer(item_obj)
-                cache.set(f'item_{pk}', serializer.data, timeout=60*15)
+                # cache.set(f'item_{pk}', serializer.data, timeout=60*15)
                 # logger.debug("Item retrieved from database and cached: %s", serializer.data)
                 return Response(serializer.data)
             except Item.DoesNotExist:
