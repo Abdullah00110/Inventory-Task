@@ -3,13 +3,13 @@ from rest_framework.test import APITestCase
 from rest_framework import status
 from django.urls import reverse
 from .models import Item
-from django.contrib.auth.models import User
+from django.contrib.auth.models import MyUser
 
 class ItemAPITests(APITestCase):
 
     def setUp(self):
         # Create a test user
-        self.user = User.objects.create_user(username='testuser', password='testpass')
+        self.Myuser = MyUser.objects.create_user(username='testuser', password='testpass')
         self.client.login(username='testuser', password='testpass')
         
         # Create a test item
