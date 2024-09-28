@@ -77,8 +77,8 @@ The **Inventory Management System** is a RESTful web service built with Django a
    | DELETE | `/api/items/{id}/`    | Delete a specific item           |
    ```
 8. **Authentication**
-   ```Register a new user via the registration endpoint.
-      Use token authentication to access protected endpoints.```
+   ``` Register a new user via the registration endpoint.```
+   ``` Use token authentication to access protected endpoints.```
 9. **Running Tests
    To run the tests for the API, use the following command:**
    ```python manage.py test items```
