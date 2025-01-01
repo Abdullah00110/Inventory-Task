@@ -9,7 +9,7 @@ The **Inventory Management System** is a RESTful web service built with Django a
 - **CRUD Operations**: Create, Read, Update, and Delete items.
 - **Authentication**: Secure API access using token-based authentication.
 - **Caching**: Utilizes Redis for caching frequently accessed data to improve performance.
-- **Logging**: Configured logging to monitor application behavior and errors.
+- **Logging**: Configured logging to monitor application behaviour and errors.
 - **Testing**: Comprehensive test coverage for all endpoints.
 
 ## Technologies Used
@@ -58,7 +58,7 @@ The **Inventory Management System** is a RESTful web service built with Django a
    ```
 5. **Run migrations:**
    ```
-   python manage.py makemigrations
+   python manage.py make migrations
    python manage.py migrate
    ```
 6. **Run the server:**
@@ -87,7 +87,7 @@ The **Inventory Management System** is a RESTful web service built with Django a
     Logging is configured to log messages to both the console and a file (debug.log). You can modify the logging configuration in settings.py as needed.
 
     **Caching**
-    The API uses Redis to cache item data. Could you make sure that the Redis server is running to take advantage of this feature?
+    The API uses Redis to cache item data. Could you ensure the Redis server runs to take advantage of this feature?
 
     **Contributing**
     ```Fork the repository.
