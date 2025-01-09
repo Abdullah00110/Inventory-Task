@@ -19,7 +19,8 @@ The **Inventory Management System** is a RESTful web service built with Django a
 - Redis
 - Python
 - PostgreSQL (or any database of your choice)
-- Docker 
+- Docker
+- AWS
 
 ## Getting Started
 
