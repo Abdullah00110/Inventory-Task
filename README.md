@@ -38,7 +38,7 @@ The **Inventory Management System** is a RESTful web service built with Django a
 
    ```bash
    git clone https://github.com/your-username/item-management-api.git
-   cd item-management-api
+   cd item-management-API
 
 2. **Create a virtual environment**:
    ```
@@ -54,7 +54,7 @@ The **Inventory Management System** is a RESTful web service built with Django a
    ```
    SECRET_KEY='your-secret-key'
    DEBUG=True
-   DATABASE_URL='your-database-url'
+   DATABASE_URL='your-database-URL
    REDIS_URL='redis://localhost:6379/0'
    ```
 5. **Run migrations:**
@@ -85,7 +85,7 @@ The **Inventory Management System** is a RESTful web service built with Django a
    ```python manage.py test items```
    
     **Logging**
-    Logging is configured to log messages to both the console and a file (debug.log). You can modify the logging configuration in settings.py as needed.
+    Logging is configured to log messages to the console and a file (debug.log). You can modify the logging configuration in settings.py as needed.
 
     **Caching**
     The API uses Redis to cache item data. Could you ensure the Redis server runs to take advantage of this feature?
@@ -93,7 +93,7 @@ The **Inventory Management System** is a RESTful web service built with Django a
     **Contributing**
     ```Fork the repository.
        1. Create a new branch (git checkout -b feature-branch).
-       2. Make your changes and commit them (git commit -m 'Add new feature').
+       2. Make and commit your changes (git commit -m 'Add new feature').
        3. Push to the branch (git push origin feature-branch).
        4. Create a new Pull Request.
     ```
